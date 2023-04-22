@@ -10,7 +10,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="bg-blend-hard-light mx-auto mt-16 p-3">
+        <div class="bg-blend-hard-light mx-auto p-3">
             <slot />
         </div>
     </div>
