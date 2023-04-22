@@ -39,4 +39,6 @@ Locally preview production build:
 npm run preview
 ```
 
+![nuxt3](https://user-images.githubusercontent.com/58510288/233768013-afdd7649-dfdf-41bc-9ca0-d2f24e8e0ea7.png)
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
