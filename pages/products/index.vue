@@ -13,9 +13,9 @@
 <script setup>
 const { data: products, pending } = await useFetch('https://fakestoreapi.com/products')
 
-// definePageMeta({
-//     layout: 'products'
-// })
+definePageMeta({
+    layout: 'products'
+})
 // onMounted(() => {
 //     nextTick(() => {
         

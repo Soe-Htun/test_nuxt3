@@ -1,24 +1,28 @@
 <template>
-    <div>
-        <header class="shadow-sm bg-white">
-            <nav class="container mx-auto p-4 flex justify-between">
-                <NuxtLink to="/products" class="font-bold">Nuxt Dojo</NuxtLink>
+    <div class="">
+        <header class="sticky z-30 top-0 shadow-sm bg-white fixed h-16 top-0 left-0 right-0">
+            <nav class="container mx-auto flex justify-between align-middle" style="line-height: 4rem;">
+                <NuxtLink to="/" class="font-bold no-underline">Nuxt Dojo</NuxtLink>
+                <ul class="flex gap-4" >
+                    <li @click="scrollToTop"> <NuxtLink key="1" to="/" class="no-underline">Home</NuxtLink> </li>
+                    <li> <NuxtLink key="2" to="/about" class="no-underline">About</NuxtLink> </li>
+                    <li> <NuxtLink to="/products" class="no-underline">Products</NuxtLink> </li>
+                </ul>
             </nav>
         </header>
-
-        <div class="container mx-auto p-4">
+        <div class="bg-blend-hard-light mx-auto p-3">
             <slot />
         </div>
-
-        <footer>
-            <ul class="flex gap-4">
-                <li><NuxtLink to="/">Home</NuxtLink></li>
-                <li><NuxtLink to="/about">About</NuxtLink></li>
-                <li><NuxtLink to="/products">Products</NuxtLink></li>
-            </ul>
-        </footer>
     </div>
 </template>
+
+<script setup>
+const scrollToTop = () => {
+    window.scrollTo(0,0)
+    navigateTo({ path: '/' , required: true})
+}
+</script>
+
 <style>
 .router-link-exact-active {
     color: #12b488;
